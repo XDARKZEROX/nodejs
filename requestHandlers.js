@@ -2,6 +2,7 @@ var exec = require("child_process").exec;
 var querystring = require("querystring");
 var fs = require("fs");
 var formidable = require("formidable");
+var util = require('util');
 
 function start(response) {
 	
@@ -33,9 +34,7 @@ function start(response) {
 function upload(response, request) {
 	if (request.url == '/upload' && request.method.toLowerCase() == 'post') {
 		var form = new formidable.IncomingForm();
-		console.log(form);
-
-
+		
 		form.parse(request, function(error, fields, files) {
 		
 		/* Posible error en sistemas Windows:
@@ -47,7 +46,6 @@ function upload(response, request) {
     		fs.unlink(files.upload.path);
 		});
 
-
 		/*fs.rename(files.upload.path, "/tmp", function(error) {
 
 			if (error) {
@@ -57,7 +55,12 @@ function upload(response, request) {
 			}
 		});*/
 		
+		//el Util insepect es como una utilidad para inspeccionar elementos del formulario
+		//console.log(util.inspect(fields));
+
 		response.writeHead(200, {"Content-Type": "text/html"});
+		response.write("Nombre: " + fields.name + "<br/>");
+		response.write("Nombre: " + fields.msg + "<br/>");
 		response.write("received image:<br/>");
 		response.write("<img src='/show' />");
 		response.end();
