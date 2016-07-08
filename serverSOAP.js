@@ -18,9 +18,9 @@ var helloService = {
 var xml = require('fs').readFileSync('resources/globalweather.wsdl', 'utf8');
 
 var server = http.createServer(function(request,response) {
-    response.end("404: Not Found: "+request.url);
+    response.end("404: Not Found: "+requesst.url);
 });
 
-server.listen(8000);
+server.listen(5000);
 
 soap.listen(server, '/wsdl', helloService, xml);
