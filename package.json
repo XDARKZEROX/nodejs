@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "private": true,
+  "main": "serverSOAP.js",
   "scripts": {
     "start": "node serverSOAP.js"
   },
