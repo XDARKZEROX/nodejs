@@ -2,10 +2,13 @@
   "name": "nodejs-examples",
   "version": "1.1.0",
   "description": "",
-  "private": true,
+  "private": false,
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
+  },
+  "engines": {
+    "node": "4.2.2"
   },
   "author": "Alexander Guzmán <nocturnal.classical@gmail.com>",
   "dependencies": {
