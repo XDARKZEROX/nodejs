@@ -5,7 +5,6 @@
                   xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl"
                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-
     <wsdl:message name="SayHelloRequest">
         <wsdl:part name="firstName" type="xsd:string"/>
     </wsdl:message>
