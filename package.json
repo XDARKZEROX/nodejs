@@ -8,7 +8,7 @@
     "start": "node serverSOAP.js"
   },
   "engines": {
-    "node": "4.13.3"
+    "node": "4.2.2"
   },
   "author": "Alexander Guzmán <nocturnal.classical@gmail.com>",
   "dependencies": {
